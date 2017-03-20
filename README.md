@@ -21,13 +21,13 @@ of movies and adjust their inventory amounts.
 ### _Enterprise Edition Requirements_
 _**The Enterprise Edition of Realm Mobile Platform offers access to the Data 
 Connector API and the Postgres adapter built on top of it. This repo does not 
-make this code public.
+make this code public.**_
 
-As a result, you will need to contact [sales@realm.io](mailto:sales@realm.io) to
-request access to:
-- Enterprise trial license key
-- Node SDK
-- `postgres_adapter.js`**_
+_**As a result, you will need to contact [sales@realm.io](mailto:sales@realm.io) to
+request access to:**_
+- _**Enterprise trial license key**_
+- _**Node SDK**_
+- _**`postgres_adapter.js`**_
 
 ## Run on Mac
 **1. Install Postgres** - various [installation mechanisms](https://www.postgresql.org/download/macosx/) 
@@ -126,10 +126,10 @@ username. By default you can leave the password as-is.
 npm install
 ```
 
-_**Note: the code in this repo will not run as-is. You will need to contact [sales@realm.io](mailto:sales@realm.io) to request access to:
-- Enterprise trial license key
-- Node SDK
-- `postgres_adapter.js`**_
+_**Note: the code in this repo will not run as-is. You will need to contact [sales@realm.io](mailto:sales@realm.io) to request access to:**_
+- _**Enterprise trial license key**_
+- _**Node SDK**_
+- _**`postgres_adapter.js`**_
 
 Now you can just run the adapter:
 ```
