@@ -188,7 +188,7 @@ parameters. Most notably with regards to the architecture is the definition of
 the schema:
 ```
 schema: [{
-    name: 'film',
+    name: 'Film',
     primaryKey: 'film_id',
     properties: {
         film_id:            { type: 'int'},
@@ -205,11 +205,13 @@ schema: [{
     },
   },
   {
-    name: 'inventory',
-    primaryKey: 'inventory_id',
+    name: 'Inventory',
+    primaryKey: 'external_id',
+    postgresPrimaryKey: 'inventory_id',
     properties: {
-        inventory_id:       { type: 'int'},
-        film_id:            { type: 'object', objectType: 'film'},
+        external_id:        { type: 'string'},
+        inventory_id:       { type: 'int', optional: true},
+        film_id:            { type: 'object', objectType: 'Film'},
         last_update:        { type: 'date'},
         store_id:           { type: 'int', default: 0}, // Store table not used, so just defaults
     },
