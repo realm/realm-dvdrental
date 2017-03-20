@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5EB210C606DE4501B1926B61 /* Pods_DVDRental.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE6E3BBC70FEBEABF721A8A /* Pods_DVDRental.framework */; };
+		F93A67361E779E6600177E05 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93A67351E779E6600177E05 /* Constants.swift */; };
+		F9E540D21E764075008E0211 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E540D11E764075008E0211 /* AppDelegate.swift */; };
+		F9E540D71E764075008E0211 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E540D51E764075008E0211 /* Main.storyboard */; };
+		F9E540D91E764075008E0211 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9E540D81E764075008E0211 /* Assets.xcassets */; };
+		F9E540DC1E764075008E0211 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E540DA1E764075008E0211 /* LaunchScreen.storyboard */; };
+		F9E540E41E764090008E0211 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E540E31E764090008E0211 /* Models.swift */; };
+		F9E540E61E76416C008E0211 /* DVDRentalLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E540E51E76416C008E0211 /* DVDRentalLoginViewController.swift */; };
+		F9E540E81E7644C1008E0211 /* DVDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E540E71E7644C1008E0211 /* DVDTableViewController.swift */; };
+		F9E540EC1E764ACD008E0211 /* DVDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E540EB1E764ACD008E0211 /* DVDViewController.swift */; };
+		F9E540EE1E779BE3008E0211 /* DVDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E540ED1E779BE3008E0211 /* DVDTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1128545AB4B98FC7FEFAA30E /* Pods-DVDRental.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVDRental.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DVDRental/Pods-DVDRental.debug.xcconfig"; sourceTree = "<group>"; };
+		6EE6E3BBC70FEBEABF721A8A /* Pods_DVDRental.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DVDRental.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49A1185411804B94BD0CE47 /* Pods-DVDRental.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVDRental.release.xcconfig"; path = "Pods/Target Support Files/Pods-DVDRental/Pods-DVDRental.release.xcconfig"; sourceTree = "<group>"; };
+		F93A67351E779E6600177E05 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F9E540CE1E764075008E0211 /* DVDRental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DVDRental.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E540D11E764075008E0211 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9E540D61E764075008E0211 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9E540D81E764075008E0211 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9E540DB1E764075008E0211 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F9E540DD1E764075008E0211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9E540E31E764090008E0211 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		F9E540E51E76416C008E0211 /* DVDRentalLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDRentalLoginViewController.swift; sourceTree = "<group>"; };
+		F9E540E71E7644C1008E0211 /* DVDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDTableViewController.swift; sourceTree = "<group>"; };
+		F9E540EB1E764ACD008E0211 /* DVDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDViewController.swift; sourceTree = "<group>"; };
+		F9E540ED1E779BE3008E0211 /* DVDTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9E540CB1E764075008E0211 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EB210C606DE4501B1926B61 /* Pods_DVDRental.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1437CD31B049043DBDAFFA29 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1128545AB4B98FC7FEFAA30E /* Pods-DVDRental.debug.xcconfig */,
+				E49A1185411804B94BD0CE47 /* Pods-DVDRental.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B9A25789013975103A086517 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EE6E3BBC70FEBEABF721A8A /* Pods_DVDRental.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9E540C51E764075008E0211 = {
+			isa = PBXGroup;
+			children = (
+				F9E540D01E764075008E0211 /* DVDRental */,
+				F9E540CF1E764075008E0211 /* Products */,
+				1437CD31B049043DBDAFFA29 /* Pods */,
+				B9A25789013975103A086517 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F9E540CF1E764075008E0211 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9E540CE1E764075008E0211 /* DVDRental.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9E540D01E764075008E0211 /* DVDRental */ = {
+			isa = PBXGroup;
+			children = (
+				F9E540D11E764075008E0211 /* AppDelegate.swift */,
+				F9E540E31E764090008E0211 /* Models.swift */,
+				F93A67351E779E6600177E05 /* Constants.swift */,
+				F9E540E51E76416C008E0211 /* DVDRentalLoginViewController.swift */,
+				F9E540E71E7644C1008E0211 /* DVDTableViewController.swift */,
+				F9E540EB1E764ACD008E0211 /* DVDViewController.swift */,
+				F9E540ED1E779BE3008E0211 /* DVDTableViewCell.swift */,
+				F9E540D51E764075008E0211 /* Main.storyboard */,
+				F9E540D81E764075008E0211 /* Assets.xcassets */,
+				F9E540DA1E764075008E0211 /* LaunchScreen.storyboard */,
+				F9E540DD1E764075008E0211 /* Info.plist */,
+			);
+			path = DVDRental;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9E540CD1E764075008E0211 /* DVDRental */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9E540E01E764075008E0211 /* Build configuration list for PBXNativeTarget "DVDRental" */;
+			buildPhases = (
+				9147538958D73E135B299734 /* [CP] Check Pods Manifest.lock */,
+				F9E540CA1E764075008E0211 /* Sources */,
+				F9E540CB1E764075008E0211 /* Frameworks */,
+				F9E540CC1E764075008E0211 /* Resources */,
+				CCC198DFAA851270040CB23C /* [CP] Embed Pods Frameworks */,
+				26FBB749206F30020E53AAFA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DVDRental;
+			productName = DVDRental;
+			productReference = F9E540CE1E764075008E0211 /* DVDRental.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9E540C61E764075008E0211 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Adam Fish";
+				TargetAttributes = {
+					F9E540CD1E764075008E0211 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F9E540C91E764075008E0211 /* Build configuration list for PBXProject "DVDRental" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9E540C51E764075008E0211;
+			productRefGroup = F9E540CF1E764075008E0211 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9E540CD1E764075008E0211 /* DVDRental */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9E540CC1E764075008E0211 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E540DC1E764075008E0211 /* LaunchScreen.storyboard in Resources */,
+				F9E540D91E764075008E0211 /* Assets.xcassets in Resources */,
+				F9E540D71E764075008E0211 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26FBB749206F30020E53AAFA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DVDRental/Pods-DVDRental-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9147538958D73E135B299734 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CCC198DFAA851270040CB23C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DVDRental/Pods-DVDRental-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9E540CA1E764075008E0211 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E540EE1E779BE3008E0211 /* DVDTableViewCell.swift in Sources */,
+				F9E540E81E7644C1008E0211 /* DVDTableViewController.swift in Sources */,
+				F9E540E61E76416C008E0211 /* DVDRentalLoginViewController.swift in Sources */,
+				F9E540EC1E764ACD008E0211 /* DVDViewController.swift in Sources */,
+				F93A67361E779E6600177E05 /* Constants.swift in Sources */,
+				F9E540E41E764090008E0211 /* Models.swift in Sources */,
+				F9E540D21E764075008E0211 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F9E540D51E764075008E0211 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9E540D61E764075008E0211 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9E540DA1E764075008E0211 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9E540DB1E764075008E0211 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9E540DE1E764075008E0211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9E540DF1E764075008E0211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9E540E11E764075008E0211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1128545AB4B98FC7FEFAA30E /* Pods-DVDRental.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DVDRental/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Realm.DVDRental;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F9E540E21E764075008E0211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E49A1185411804B94BD0CE47 /* Pods-DVDRental.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DVDRental/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Realm.DVDRental;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9E540C91E764075008E0211 /* Build configuration list for PBXProject "DVDRental" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9E540DE1E764075008E0211 /* Debug */,
+				F9E540DF1E764075008E0211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9E540E01E764075008E0211 /* Build configuration list for PBXNativeTarget "DVDRental" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9E540E11E764075008E0211 /* Debug */,
+				F9E540E21E764075008E0211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9E540C61E764075008E0211 /* Project object */;
+}

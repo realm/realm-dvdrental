@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rental Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DVDRentalLoginViewController" customModule="DVDRental" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <segue destination="W6k-Ie-jNk" kind="show" identifier="main" id="AhR-7X-SAY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="136"/>
+        </scene>
+        <!--DVD Inventory-->
+        <scene sceneID="FXt-rZ-VQ5">
+            <objects>
+                <tableViewController id="XRX-G1-EK1" customClass="DVDTableViewController" customModule="DVDRental" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" id="ODD-oM-Y6Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search Inventory" id="iz9-Nv-M20">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="XRX-G1-EK1" id="za9-eR-UaQ"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DVDCell" id="7VX-hk-DK7" customClass="DVDTableViewCell" customModule="DVDRental" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="88"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7VX-hk-DK7" id="dqO-Qk-Sfv">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="87.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DVD Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXP-Ef-VQK">
+                                            <rect key="frame" x="8" y="8" width="326" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="IYM-OF-KLr"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In Stock: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIf-UB-3cr">
+                                            <rect key="frame" x="8" y="33" width="326" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="Gll-6h-Uct"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0u-yG-MuN">
+                                            <rect key="frame" x="8" y="53" width="326" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" id="0pv-b3-Wru"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="z0u-yG-MuN" firstAttribute="trailing" secondItem="dqO-Qk-Sfv" secondAttribute="trailingMargin" id="5kA-bl-EB1"/>
+                                        <constraint firstItem="JIf-UB-3cr" firstAttribute="trailing" secondItem="dqO-Qk-Sfv" secondAttribute="trailingMargin" id="6Af-xM-rxT"/>
+                                        <constraint firstItem="JIf-UB-3cr" firstAttribute="top" secondItem="BXP-Ef-VQK" secondAttribute="bottom" constant="4" id="8rp-rH-6DX"/>
+                                        <constraint firstItem="z0u-yG-MuN" firstAttribute="top" secondItem="JIf-UB-3cr" secondAttribute="bottom" constant="4" id="9dL-6r-FWZ"/>
+                                        <constraint firstItem="BXP-Ef-VQK" firstAttribute="leading" secondItem="dqO-Qk-Sfv" secondAttribute="leadingMargin" id="PJG-C4-Cw9"/>
+                                        <constraint firstItem="BXP-Ef-VQK" firstAttribute="trailing" secondItem="dqO-Qk-Sfv" secondAttribute="trailingMargin" id="S8Z-tV-0jH"/>
+                                        <constraint firstItem="BXP-Ef-VQK" firstAttribute="top" secondItem="dqO-Qk-Sfv" secondAttribute="topMargin" id="dDV-9n-kmL"/>
+                                        <constraint firstItem="z0u-yG-MuN" firstAttribute="bottom" secondItem="dqO-Qk-Sfv" secondAttribute="bottomMargin" id="lmD-pB-nnt"/>
+                                        <constraint firstItem="JIf-UB-3cr" firstAttribute="leading" secondItem="dqO-Qk-Sfv" secondAttribute="leadingMargin" id="rBT-f4-zDM"/>
+                                        <constraint firstItem="z0u-yG-MuN" firstAttribute="leading" secondItem="dqO-Qk-Sfv" secondAttribute="leadingMargin" id="uT2-B7-otE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="filmDescription" destination="z0u-yG-MuN" id="QAg-mo-eHX"/>
+                                    <outlet property="filmTitle" destination="BXP-Ef-VQK" id="eUL-3p-I0M"/>
+                                    <outlet property="stockLabel" destination="JIf-UB-3cr" id="na6-ZG-u5O"/>
+                                    <segue destination="iGh-rN-QEm" kind="show" identifier="dvd" id="omD-Jm-RwN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XRX-G1-EK1" id="OXO-au-aPT"/>
+                            <outlet property="delegate" destination="XRX-G1-EK1" id="Lbv-pu-g9A"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="DVD Inventory" id="ILd-v8-42W"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ez3-L4-lg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1932" y="136.28185907046478"/>
+        </scene>
+        <!--DVD Title-->
+        <scene sceneID="eII-5P-Drj">
+            <objects>
+                <viewController title="DVD Title" id="iGh-rN-QEm" customClass="DVDViewController" customModule="DVDRental" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gYt-nL-lsh"/>
+                        <viewControllerLayoutGuide type="bottom" id="dOD-c9-Jf1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9CV-w0-Ibg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Qb-6N-Dnp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2866" y="136"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HhH-8Y-uca">
+            <objects>
+                <navigationController id="W6k-Ie-jNk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SfE-I7-Mfj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XRX-G1-EK1" kind="relationship" relationship="rootViewController" id="YgL-Za-wzA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="peb-2a-0JK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983" y="137"/>
+        </scene>
+    </scenes>
+</document>

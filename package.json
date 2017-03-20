@@ -1,0 +1,9 @@
+{
+  "name": "adapter-example",
+  "version": "0.0.1",
+  "dependencies": {
+    "libpq": "^1.8.5",
+    "realm": "file:realm-1.2.1-professional.tgz",
+    "sqlstring": "^2.2.0"
+  }
+}
