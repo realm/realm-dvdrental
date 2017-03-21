@@ -7,6 +7,9 @@ fault-tolerant data adapter. This demo is designed to showcase how Realm can
 "mobilize" existing legacy database systems, allowing Realm Object Server to be 
 a realtime sync gateway.
 
+# Video Tutorial
+<a href="https://realm.wistia.com/medias/wfucjymw8c?wtime=0"><img src="https://embed-ssl.wistia.com/deliveries/8c844d4828b343b3bf5d1e8af977bd43c0b925c4.jpg?image_crop_resized=900x524&image_play_button=true&image_play_button_size=2x&image_play_button_color=1d2340e0" alt="Realm Postgres Data Connector Tutorial" width="450" height="262" /></a>
+
 # Installation
 There are four components that make up this demo:
 1. Postgres - The sample data is the same data set from the [Postgres Tutorial](http://www.postgresqltutorial.com/)
