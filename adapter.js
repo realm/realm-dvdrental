@@ -1,6 +1,7 @@
 const PostgresAdapter = require('realm-data-adapters').PostgresAdapter
 const Realm = require('realm')
 const fs = require('fs');
+const path = require('path');
 
 // Unlock Professional Edition APIs
 Realm.Sync.setAccessToken(fs.readFileSync(path.join(__dirname, './access-token.enterprise'), 'utf-8'));

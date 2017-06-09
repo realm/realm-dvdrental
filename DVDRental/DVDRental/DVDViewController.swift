@@ -28,7 +28,7 @@ class DVDViewController: FormViewController {
                 row.title = NSLocalizedString("Title", comment:"Title")
                 row.value = film.title
                 
-                row.disabled = true
+                row.disabled = false
             }
             .cellUpdate({ [weak self] (cell, row) in
                 row.value = self?.film.title

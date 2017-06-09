@@ -19,7 +19,7 @@ class DVDRentalLoginViewController: UIViewController {
         loginViewController = LoginViewController(style: .lightOpaque)
         
         if (SyncUser.current != nil) {
-            setDefaultRealmConfigurationWithUser(user: SyncUser.current!, hostname: defaultSyncHost)
+            setDefaultRealmConfigurationWithUser(user: SyncUser.current!, hostname: self.loginViewController.serverURL!)
             
             performSegue(withIdentifier: kLoginToMainSegue, sender: self)
         }
