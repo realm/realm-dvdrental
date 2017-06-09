@@ -6,7 +6,7 @@ const path = require('path');
 // Unlock Professional Edition APIs
 Realm.Sync.setAccessToken(fs.readFileSync(path.join(__dirname, './access-token.enterprise'), 'utf-8'));
 
-const admin_user_token = "ewoJImlkZW50aXR5IjogIl9fYXV0aCIsCgkiYWNjZXNzIjogWyJ1cGxvYWQiLCAiZG93bmxvYWQiLCAibWFuYWdlIl0KfQo=:gfDmgxHpKhi+6tRdLCOX+qXGg6Qd/RnzCcYHFCgEVgrPqL6nlAS14MEUcGsoCjkn0LrYx22RYS5NyFu1och+9nGV6Z7l88qqjMiwdIwAFXqjlO0Mn7xBpjrlu1zXojuZhrSb885Ow3cr+4xTZme+UC7RT7S5DtbcRAAO7U+qGMW2CwVDqmhF5f3o4iLoyTP2IqQjC5G4VEvjoF8Mw344nKQ0mjXhmjJOXAiCEiv57XIk+BjUAsFfbOqu8WS9GD0KDwi3FoMPpuN2b9L3yaDxCRStWsS9thGMTxJYbzGsNKvuBBHizYFxfV+Ik2HB1gz/WSYUIwf5DZfnYdqXTZR4TQ==";
+const admin_user_token = "YOUR ADMIN TOKEN HERE";
 const admin_user = Realm.Sync.User.adminUser(admin_user_token);
 
 var adapter = new PostgresAdapter({
@@ -20,8 +20,8 @@ var adapter = new PostgresAdapter({
     postgresConfig: {
         host:     '127.0.0.1',
         port:     5432,
-        user:     'ianward', //
-        password: 'password'
+        user:     'YOUR POSTGRES USER HERE', //
+        password: 'YOUR POSTGRES PASSWORD HERE'
     },
     resetPostgresReplicationSlot: true,
 

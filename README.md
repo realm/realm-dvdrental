@@ -1,10 +1,10 @@
 # Overview
-DVDRental is a sample inventory application which demonstrates Realm Mobile 
-Platform's enterprise data connector API. The underlying data is a Postgres 
-sample DVD movie database from the [Postgres Tutorial](http://www.postgresqltutorial.com/). 
-The data is synchronized in realtime with Realm via a bi-directional 
-fault-tolerant data adapter. This demo is designed to showcase how Realm can 
-"mobilize" existing legacy database systems, allowing Realm Object Server to be 
+DVDRental is a sample inventory application which demonstrates Realm Mobile
+Platform's enterprise data connector API. The underlying data is a Postgres
+sample DVD movie database from the [Postgres Tutorial](http://www.postgresqltutorial.com/).
+The data is synchronized in realtime with Realm via a bi-directional
+fault-tolerant data adapter. This demo is designed to showcase how Realm can
+"mobilize" existing legacy database systems, allowing Realm Object Server to be
 a realtime sync gateway.
 
 # Video Tutorial
@@ -13,44 +13,44 @@ a realtime sync gateway.
 # Installation
 There are four components that make up this demo:
 1. Postgres - The sample data is the same data set from the [Postgres Tutorial](http://www.postgresqltutorial.com/)
-2. Realm Object Server - this coordinates the data sync between mobile clients 
+2. Realm Object Server - this coordinates the data sync between mobile clients
 and the server.
-3. `adapter.js` - Node application which configures the Realm Postgres data 
-adapter. This requires the `realm-js` SDK with the data connector API and 
-`postgres_adapter.js` to function (see Enterprise Edition requirements below).
-4. DVDRental - Swift iOS sample application that allows users to view the list 
+3. `adapter.js` - Node application which configures the Realm Postgres data
+adapter. This requires the `realm-js` SDK with the data connector API and
+Realm Data Adapter NPM Package to function (see Enterprise Edition requirements below).
+4. DVDRental - Swift iOS sample application that allows users to view the list
 of movies and adjust their inventory amounts.
 
 ### _Enterprise Edition Requirements_
-_**The Enterprise Edition of Realm Mobile Platform offers access to the Data 
-Connector API and the Postgres adapter built on top of it. This repo does not 
+_**The Enterprise Edition of Realm Mobile Platform offers access to the Data
+Connector API and the Postgres adapter built on top of it. This repo does not
 make this code public.**_
 
 _**As a result, you will need to contact [sales@realm.io](mailto:sales@realm.io) to
 request access to:**_
 - _**Enterprise trial license key**_
 - _**Node SDK**_
-- _**`postgres_adapter.js`**_
+- _**`Realm Data Adapter NPM Package`**_
 
 ## Run on Mac
-**1. Install Postgres** - various [installation mechanisms](https://www.postgresql.org/download/macosx/) 
+**1. Install Postgres** - various [installation mechanisms](https://www.postgresql.org/download/macosx/)
 exist, including a graphical `Postgres.app`. See [Postgres documentation](https://www.postgresql.org/download/macosx/)
 for more details. If you have Homebrew, the installation is:
 ```
 brew install postgresql
 ```
-**2. Configure Postgres** - to support the Realm Postgres data adapter, Postgres 
+**2. Configure Postgres** - to support the Realm Postgres data adapter, Postgres
 needs to be configured to enable [Logical Decoding](https://www.postgresql.org/docs/9.6/static/logicaldecoding-explanation.html):
 
->Logical decoding is the process of extracting all persistent changes to a 
-database's tables into a coherent, easy to understand format which can be 
+>Logical decoding is the process of extracting all persistent changes to a
+database's tables into a coherent, easy to understand format which can be
 interpreted without detailed knowledge of the database's internal state.
 >
->In PostgreSQL, logical decoding is implemented by decoding the contents of the 
-write-ahead log, which describe changes on a storage level, into an 
+>In PostgreSQL, logical decoding is implemented by decoding the contents of the
+write-ahead log, which describe changes on a storage level, into an
 application-specific form such as a stream of tuples or SQL statements.
 
-To enable, edit your `postgresql.conf` file to enable logical replication by 
+To enable, edit your `postgresql.conf` file to enable logical replication by
 changing the following settings:
 ```
 wal_level = logical
@@ -62,66 +62,66 @@ For the Homebrew installation this file exists at:
 ```
 /usr/local/var/postgres/postgresql.conf
 ```
-**3. Start Postgres** - For the Homebrew installation you can start Postgres via 
+**3. Start Postgres** - For the Homebrew installation you can start Postgres via
 the command line to run in the foreground:
 ```
 postgres -D /usr/local/var/postgres
 ```
-On first run of Postgres you will need to create an initial database. For the 
+On first run of Postgres you will need to create an initial database. For the
 Homebrew installation run:
 ```
 createdb `whoami`
 ```
 This command will create an initial database matching your macOS username.
 
-**3. Run Realm Object Server** - the demo is setup by default to assume the server 
+**3. Run Realm Object Server** - the demo is setup by default to assume the server
 is running locally. You can install the macOS version of Realm Object Server by
-downloading the [zip package](https://realm.io/docs/realm-object-server/) or 
+downloading the [zip package](https://realm.io/docs/realm-object-server/) or
 follow the directions to install on Linux.
 
-_**Note: the Postgres adapter is a feature of the Enterprise Edition of Realm 
-Mobile Platform, but will work with any version of Realm Object Server. The 
+_**Note: the Postgres adapter is a feature of the Enterprise Edition of Realm
+Mobile Platform, but will work with any version of Realm Object Server. The
 enterprise functionality required is contained in the Node SDK and unlocked via
 a license key.**_
 
-For macOS, start Realm Object Server by double-clicking the file 
-`start-object-server.command`. This file will open a terminal window and start 
+For macOS, start Realm Object Server by double-clicking the file
+`start-object-server.command`. This file will open a terminal window and start
 Realm Object Server for you.
 
-You will be prompted to create an admin user for the server with an email and 
+You will be prompted to create an admin user for the server with an email and
 password. Remember these credentials for later.
 
-**4. Setup the Postgres adapter** - the `adapter.js` file includes a default 
+**4. Setup the Postgres adapter** - the `adapter.js` file includes a default
 configuration for the demo app:
 ```
 // Replace with the token on your Realm Object Server installation
-var access_token = 'ewoJImlkZW50aXR5IjogIl9fYXV0aCIsCgkiYWNjZXNzIjogWyJ1cGxvYWQiLCAiZG93bmxvYWQiLCAibWFuYWdlIl0KfQo=:UH4womynqiP+9/b4kXvGc7E9XrPB3bbdCKJNXhjbWwXN7jbRLlldsG5jCu5CF9vEIYl8nSrORmGpIC/6tztlPzKs3RkIphJWb19uvD3shL6zKy7W+iZrGzPrFDNpEXM4hp4Hq1L/zgxMf1vlElL5JzW2Yq5AybpZZAeP6IVM/xC5bRfCzf7iER8om28WxnVK3CC2buOJbV+dKKWNSVbVl7Ol3N9+Vu2owkByGGGaY0DjzWkTzf+Y+q8r1aoC5MBgOqXhde+bWSiKc2hzFK5FZH1m0KG5+odD40r2mahxdAw304S6ipJcIwGA5pFlBsSNQ/c9K8DYvR0sUZXu9M5xlQ==';
+var access_token = 'YOUR ADMIN TOKEN HERE';
 
 var pg_host = 'localhost';
 var pg_port = 5432;
 
 // On macOS this is your system's username
-var pg_user = 'afish';
-var pg_password = 'password';
+var pg_user = 'YOUR POSTGRES USER HERE';
+var pg_password = 'YOUR POSTGRES PASSWORD HERE';
 ```
 You will need to update the `access_token` variable with the admin token created
 via your installation of Realm Object Server:
 
-The admin token is stored in a text file on the server. Under Linux, view the 
+The admin token is stored in a text file on the server. Under Linux, view the
 token with:
 ```
 cat /etc/realm/admin_token.base64
 ```
-On macOS, the token file is in the `realm-object-server` folder, inside the 
+On macOS, the token file is in the `realm-object-server` folder, inside the
 Realm Mobile Platform folder. Navigate to that folder and view the token:
 ```
 cd path-to/realm-mobile-platform
 cat realm-object-server/admin_token.base64
 ```
-The other variables configure the connection to Postgres. If you are running 
+The other variables configure the connection to Postgres. If you are running
 Postgres locally leave the host/port as is.
 
-If you installed Postgres via Homebrew, then the username is your system's 
+If you installed Postgres via Homebrew, then the username is your system's
 username. By default you can leave the password as-is.
 
 **5. Start the Postgres adapter** - first you must retrieve the dependencies via NPM:
@@ -132,20 +132,20 @@ npm install
 _**Note: the code in this repo will not run as-is. You will need to contact [sales@realm.io](mailto:sales@realm.io) to request access to:**_
 - _**Enterprise trial license key**_
 - _**Node SDK**_
-- _**`postgres_adapter.js`**_
+- _**`Realm Data Adapter NPM Package`**_
 
 Now you can just run the adapter:
 ```
 node adapter.js
 ```
-The adapter script will first prepare Postgres, by adding a new database: 
-`dvdrental` to it and loading the sample data from `dvdrental.tar`. You will 
+The adapter script will first prepare Postgres, by adding a new database:
+`dvdrental` to it and loading the sample data from `dvdrental.tar`. You will
 then observe the adapter retrieving the sample data from Postgres as it creates
 a synchronized Realm.
 
 The script will then continue listening for changes between Postgres and Realm.
 
-**6. Run `DVDRental` demo app** - finally with everything setup you can run the 
+**6. Run `DVDRental` demo app** - finally with everything setup you can run the
 included iOS demo app. Move into the app directory:
 ```
 cd DVDRental
@@ -157,24 +157,24 @@ pod install
 Finally, open `DVDRental.xcworkspace` and run the application!
 
 **7. Using `DVDRental` demo app** - once you have finally run the demo app, it will
-first require you to login. Use the same login credentials you created when 
+first require you to login. Use the same login credentials you created when
 starting the Realm Object Server in step 3.
 
 Once you have logged in, the app will display the entire list of films matching
-the data in the `film` table in Postgres. If you click on a film, you can then 
+the data in the `film` table in Postgres. If you click on a film, you can then
 adjust the inventory levels. Adjusting the inventory will result in adding or
 removing `inventory` objects, which the adapter will then sync to Postgres.
 
-To observe these changes, you can utilize a visual browser. For Postgres, we 
-recommend [Postico](https://eggerapps.at/postico/). Similarly, you can use the 
-[Realm Browser](https://realm.io/docs/realm-object-server/#data-browser) to 
+To observe these changes, you can utilize a visual browser. For Postgres, we
+recommend [Postico](https://eggerapps.at/postico/). Similarly, you can use the
+[Realm Browser](https://realm.io/docs/realm-object-server/#data-browser) to
 observe data changes in the matching data in Realm.
 
-Similarly, `adapter.js` will print out the SQL commands as it reacts to changes 
+Similarly, `adapter.js` will print out the SQL commands as it reacts to changes
 coming in from the mobile app.
- 
+
 ## Architecture
-This demo utilizes an existing sample dataset [DVD Rental](http://www.postgresqltutorial.com/postgresql-sample-database/) which is 
+This demo utilizes an existing sample dataset [DVD Rental](http://www.postgresqltutorial.com/postgresql-sample-database/) which is
 part of the [Postgres Tutorial](http://www.postgresqltutorial.com/postgresql-sample-database/).
 >The DVD rental database was ported from the sakila sample database for PostgreSQL with some adjustments. The DVD rental database represents business processes of a DVD rental store. The DVD rental database has many objects including:
 >
@@ -186,8 +186,8 @@ part of the [Postgres Tutorial](http://www.postgresqltutorial.com/postgresql-sam
 > * 13 sequences
 <center> <img src="http://www.postgresqltutorial.com/wp-content/uploads/2013/05/PostgreSQL-Sample-Database.png"/></center>
 
-The `adapter.js` file creates a `PostgresAdapter` with various configuration 
-parameters. Most notably with regards to the architecture is the definition of 
+The `adapter.js` file creates a `PostgresAdapter` with various configuration
+parameters. Most notably with regards to the architecture is the definition of
 the schema:
 ```
 schema: [{
@@ -221,7 +221,7 @@ schema: [{
   },
 ]
 ```
-While the Postgres sample database includes several tables, for the purposes of 
+While the Postgres sample database includes several tables, for the purposes of
 the demo the mobile app only needs the `film` and `inventory` tables. As a result,
 the schema defined in the adapter only defines a Realm schema matching those tables.
 
@@ -237,8 +237,8 @@ the foreign key relationship into a Realm link!
 
 The data structure between `film` and `inventory` is that each `film` row/object
 will link to 0 or more `inventory` row/object(s). The number of linked inventory
-represents the number of copies of the film. Thus in the app as you add more to 
-inventory of a particular film, the app will create an `inventory` object which 
+represents the number of copies of the film. Thus in the app as you add more to
+inventory of a particular film, the app will create an `inventory` object which
 the adapter will then convert into a new row in the `inventory` table.
 
 Similarly, the reverse will happen, such that if you remove an `inventory` row
@@ -246,17 +246,17 @@ from Postgres, the adapter will convert this change and delete the corresponding
 `inventory` object in Realm.
 
 ## Additional Details
-The `adapter.js` configuration includes more capabilities, such as supporting 
-mapping Postgres data into user-specific Realms. However, for the purposes of 
+The `adapter.js` configuration includes more capabilities, such as supporting
+mapping Postgres data into user-specific Realms. However, for the purposes of
 this demo, the adapter creates a single Realm file with the `inventory` and `film`
 data in it
 
-If you run into issues you can reset everything by first stopping Realm Object 
+If you run into issues you can reset everything by first stopping Realm Object
 Server and running:
 ```
 realm-mobile-platform/reset-server-realms.command
 ```
-You can then use a special command in `adapter.js` to remove the sample database 
+You can then use a special command in `adapter.js` to remove the sample database
 from Postgres, in addition, to Realm files created by the adapter:
 ```
 node adapter.js -r
