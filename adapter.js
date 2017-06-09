@@ -22,6 +22,7 @@ var adapter = new PostgresAdapter({
         user:     'ianward', //
         password: 'password'
     },
+    resetPostgresReplicationSlot: true,
 
     // Set to true to create the Postgres DB if not already created
     createPostgresDB: false,
