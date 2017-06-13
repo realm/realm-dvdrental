@@ -9,11 +9,13 @@ Realm.Sync.setAccessToken(fs.readFileSync(path.join(__dirname, './access-token.e
 const admin_user_token = "YOUR ADMIN TOKEN HERE";
 const admin_user = Realm.Sync.User.adminUser(admin_user_token);
 
-require('child_process').execSync('rm -rf ./realm-object-server');
+const pg_user = 'YOUR POSTGRES USER HERE';
+const pg_password = 'YOUR POSTGRES PASSWORD HERE';
 
-process.on('uncaughtException', function(err) {
-  console.log(err);
- });
+// load sample data
+spawn( 'pg_restore', [ '-U', pg_user, '-d', 'dvdrental', './dvdrental.tar' ] );
+
+process.on('uncaughtException', (err) => console.log(err));
 
 var adapter = new PostgresAdapter({
     // Realm configuration parameters for connecting to ROS
@@ -26,8 +28,8 @@ var adapter = new PostgresAdapter({
     postgresConfig: {
         host:     '127.0.0.1',
         port:     5432,
-        user:     'YOUR POSTGRES USER HERE', //
-        password: 'YOUR POSTGRES PASSWORD HERE'
+        user:     pg_user, //
+        password: pg_password
     },
     resetPostgresReplicationSlot: true,
 
