@@ -9,6 +9,12 @@ Realm.Sync.setAccessToken(fs.readFileSync(path.join(__dirname, './access-token.e
 const admin_user_token = "YOUR ADMIN TOKEN HERE";
 const admin_user = Realm.Sync.User.adminUser(admin_user_token);
 
+require('child_process').execSync('rm -rf ./realm-object-server');
+
+process.on('uncaughtException', function(err) {
+  console.log(err);
+ });
+
 var adapter = new PostgresAdapter({
     // Realm configuration parameters for connecting to ROS
     realmConfig: {
@@ -25,8 +31,9 @@ var adapter = new PostgresAdapter({
     },
     resetPostgresReplicationSlot: true,
 
+
     // Set to true to create the Postgres DB if not already created
-    createPostgresDB: false,
+    createPostgresDB: true,
     initializeRealmFromPostgres: true,
     // Map of custom types to Postgres types
     customPostgresTypes: {
