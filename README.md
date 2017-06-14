@@ -91,7 +91,7 @@ Realm Object Server for you.
 You will be prompted to create an admin user for the server with an email and
 password. Remember these credentials for later.
 
-**4. Setup the Postgres adapter** - the `config.js` file includes a default
+**4. Configure the Postgres adapter** - the `config.js` file includes a default
 configuration for the demo app:
 ```
 // Database name
@@ -141,13 +141,16 @@ _**Note: the code in this repo will not run as-is. You will need to contact [sal
 - _**Node SDK**_
 - _**`Realm Data Adapter NPM Package`**_
 
-Now you can just run the adapter:
+Now you need to setup Postgres (this is only needed on first run). 
+The script will add a new database: `dvdrental` to it and load the sample data from `dvdrental.tar`.
+```
+node setup.js
+```
+Finally, start the adapter:
 ```
 node adapter.js
 ```
-The adapter script will first prepare Postgres, by adding a new database:
-`dvdrental` to it and loading the sample data from `dvdrental.tar`. You will
-then observe the adapter retrieving the sample data from Postgres as it creates
+You will then observe the adapter retrieving the sample data from Postgres as it creates
 a synchronized Realm.
 
 The script will then continue listening for changes between Postgres and Realm.
@@ -263,9 +266,9 @@ Server and running:
 ```
 realm-mobile-platform/reset-server-realms.command
 ```
-You can then use a special command in `adapter.js` to remove the sample database
+You can then use a rest script to remove the sample database
 from Postgres, in addition, to Realm files created by the adapter:
 ```
-node adapter.js -r
+node reset.js
 ```
 Finally, delete the demo app from your device.
