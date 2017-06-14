@@ -11,7 +11,6 @@ import UIKit
 class DVDTableViewCell: UITableViewCell {
     @IBOutlet weak var filmTitle: UILabel!
     @IBOutlet weak var stockLabel: UILabel!
-    @IBOutlet weak var filmDescription: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
