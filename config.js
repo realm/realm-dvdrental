@@ -1,4 +1,7 @@
 module.exports = {
+  // Database name
+  database_name: "dvdrental",
+  
   // Realm Object Server URL
   realm_object_server_url: "realm://127.0.0.1:9080",
   

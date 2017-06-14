@@ -18,7 +18,7 @@ var adapter = new PostgresAdapter({
         server: Config.realm_object_server_url, // or specify your realm-object-server location
         user:   admin_user,
     },
-    dbName: 'dvdrental',
+    dbName: Config.database_name,
     // Postgres configuration and database name
     postgresConfig: Config.postgres_config,
     resetPostgresReplicationSlot: true,
@@ -41,10 +41,10 @@ var adapter = new PostgresAdapter({
     applyRealmSchemaChangesToPostgres: true,
 
     // Only match a single Realm called 'testRealm'
-    realmRegex: `/*dvdrental`,
+    realmRegex: `/*`+Config.database_name,
 
     // Specify the Realm name all Postgres changes should be applied to
-    mapPostgresChangeToRealmPath: `/dvdrental`,
+    mapPostgresChangeToRealmPath: `/`+Config.database_name,
 
     // Speicfy the Realm objects we want to replicate in Postres.
     // Any types or properties not specified here will not be replicated
