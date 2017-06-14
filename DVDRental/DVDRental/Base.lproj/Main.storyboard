@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -52,52 +52,36 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7VX-hk-DK7" id="dqO-Qk-Sfv">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="87.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="88"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DVD Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXP-Ef-VQK">
                                             <rect key="frame" x="8" y="8" width="326" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="IYM-OF-KLr"/>
+                                                <constraint firstAttribute="height" constant="21" id="rQi-wx-PF8"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In Stock: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIf-UB-3cr">
-                                            <rect key="frame" x="8" y="33" width="326" height="16"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="16" id="Gll-6h-Uct"/>
-                                            </constraints>
+                                            <rect key="frame" x="8" y="33" width="326" height="46.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0u-yG-MuN">
-                                            <rect key="frame" x="8" y="53" width="326" height="26"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" id="0pv-b3-Wru"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="z0u-yG-MuN" firstAttribute="trailing" secondItem="dqO-Qk-Sfv" secondAttribute="trailingMargin" id="5kA-bl-EB1"/>
-                                        <constraint firstItem="JIf-UB-3cr" firstAttribute="trailing" secondItem="dqO-Qk-Sfv" secondAttribute="trailingMargin" id="6Af-xM-rxT"/>
-                                        <constraint firstItem="JIf-UB-3cr" firstAttribute="top" secondItem="BXP-Ef-VQK" secondAttribute="bottom" constant="4" id="8rp-rH-6DX"/>
-                                        <constraint firstItem="z0u-yG-MuN" firstAttribute="top" secondItem="JIf-UB-3cr" secondAttribute="bottom" constant="4" id="9dL-6r-FWZ"/>
-                                        <constraint firstItem="BXP-Ef-VQK" firstAttribute="leading" secondItem="dqO-Qk-Sfv" secondAttribute="leadingMargin" id="PJG-C4-Cw9"/>
-                                        <constraint firstItem="BXP-Ef-VQK" firstAttribute="trailing" secondItem="dqO-Qk-Sfv" secondAttribute="trailingMargin" id="S8Z-tV-0jH"/>
-                                        <constraint firstItem="BXP-Ef-VQK" firstAttribute="top" secondItem="dqO-Qk-Sfv" secondAttribute="topMargin" id="dDV-9n-kmL"/>
-                                        <constraint firstItem="z0u-yG-MuN" firstAttribute="bottom" secondItem="dqO-Qk-Sfv" secondAttribute="bottomMargin" id="lmD-pB-nnt"/>
-                                        <constraint firstItem="JIf-UB-3cr" firstAttribute="leading" secondItem="dqO-Qk-Sfv" secondAttribute="leadingMargin" id="rBT-f4-zDM"/>
-                                        <constraint firstItem="z0u-yG-MuN" firstAttribute="leading" secondItem="dqO-Qk-Sfv" secondAttribute="leadingMargin" id="uT2-B7-otE"/>
+                                        <constraint firstItem="BXP-Ef-VQK" firstAttribute="leading" secondItem="dqO-Qk-Sfv" secondAttribute="leadingMargin" id="3My-qZ-MyY"/>
+                                        <constraint firstItem="JIf-UB-3cr" firstAttribute="trailing" secondItem="dqO-Qk-Sfv" secondAttribute="trailingMargin" id="IFv-tj-WrZ"/>
+                                        <constraint firstItem="JIf-UB-3cr" firstAttribute="top" secondItem="BXP-Ef-VQK" secondAttribute="bottom" constant="4" id="KGV-ml-a9a"/>
+                                        <constraint firstItem="BXP-Ef-VQK" firstAttribute="trailing" secondItem="dqO-Qk-Sfv" secondAttribute="trailingMargin" id="L55-Gd-a1E"/>
+                                        <constraint firstItem="BXP-Ef-VQK" firstAttribute="top" secondItem="dqO-Qk-Sfv" secondAttribute="topMargin" id="Uw0-iW-AQO"/>
+                                        <constraint firstItem="JIf-UB-3cr" firstAttribute="leading" secondItem="dqO-Qk-Sfv" secondAttribute="leadingMargin" id="ZTG-ZJ-MPE"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="JIf-UB-3cr" secondAttribute="bottom" id="g50-hC-qU1"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="filmDescription" destination="z0u-yG-MuN" id="QAg-mo-eHX"/>
                                     <outlet property="filmTitle" destination="BXP-Ef-VQK" id="eUL-3p-I0M"/>
                                     <outlet property="stockLabel" destination="JIf-UB-3cr" id="na6-ZG-u5O"/>
                                     <segue destination="iGh-rN-QEm" kind="show" identifier="dvd" id="omD-Jm-RwN"/>
