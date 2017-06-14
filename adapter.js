@@ -1,20 +1,25 @@
-const PostgresAdapter = require('realm-data-adapters').PostgresAdapter
-const Realm = require('realm')
+const Realm = require('realm');
 const fs = require('fs');
 const path = require('path');
+const PostgresAdapter = require('realm-data-adapters').PostgresAdapter;
+
 
 // Unlock Professional Edition APIs
 Realm.Sync.setAccessToken(fs.readFileSync(path.join(__dirname, './access-token.enterprise'), 'utf-8'));
 
-const admin_user_token = "YOUR ADMIN TOKEN HERE";
+// Admin token used to talk to ROS - get from ROS output
+const admin_user_token = "YOUR_ADMIN_TOKEN_HERE";
 const admin_user = Realm.Sync.User.adminUser(admin_user_token);
 
-const pg_user = 'YOUR POSTGRES USER HERE';
-const pg_password = 'YOUR POSTGRES PASSWORD HERE';
+// Posgres config used for all connections - replace with your data
+const postgresConfig = {
+    host:     '127.0.0.1',
+    port:     5432,
+    user:     'YOUR_POSTGRES_USER',
+    password: 'YOUR_POSTGRES_PASSWORD'
+}
 
-// load sample data
-spawn( 'pg_restore', [ '-U', pg_user, '-d', 'dvdrental', './dvdrental.tar' ] );
-
+// Print out uncaught exceptions
 process.on('uncaughtException', (err) => console.log(err));
 
 var adapter = new PostgresAdapter({
@@ -25,12 +30,7 @@ var adapter = new PostgresAdapter({
     },
     dbName: 'dvdrental',
     // Postgres configuration and database name
-    postgresConfig: {
-        host:     '127.0.0.1',
-        port:     5432,
-        user:     pg_user, //
-        password: pg_password
-    },
+    postgresConfig: postgresConfig,
     resetPostgresReplicationSlot: true,
 
 
