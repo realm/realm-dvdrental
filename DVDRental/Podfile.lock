@@ -1,15 +1,19 @@
 PODS:
-  - BRYXBanner (0.7.2)
+  - BRYXBanner (0.7.3)
   - Eureka (2.0.1)
   - Realm (2.4.4):
     - Realm/Headers (= 2.4.4)
   - Realm/Headers (2.4.4)
-  - RealmLoginKit (0.0.11):
+  - RealmLoginKit (0.0.15):
+    - Realm
+    - RealmLoginKit/Core (= 0.0.15)
+    - TORoundedTableView
+  - RealmLoginKit/Core (0.0.15):
     - Realm
     - TORoundedTableView
   - RealmSwift (2.4.4):
     - Realm (= 2.4.4)
-  - TORoundedTableView (0.0.3)
+  - TORoundedTableView (0.1.2)
 
 DEPENDENCIES:
   - BRYXBanner (~> 0.7.2)
@@ -18,13 +22,13 @@ DEPENDENCIES:
   - RealmSwift (~> 2.4.4)
 
 SPEC CHECKSUMS:
-  BRYXBanner: ed407a56c53f2add0aaa16f810062eac48d802cf
+  BRYXBanner: bd26a91cb8a5826a8bc7687891043d287dd3ee53
   Eureka: ae837bb1dfae0c07bc1bda7aeef87876eeb537c2
   Realm: 5a280a1f5a9a3c267bebf4f41ee47911137703d7
-  RealmLoginKit: 3a1b3614e43e1b8553d032fcdfbe2f1280d0860c
+  RealmLoginKit: 20e1b4707fa751d38f8bfc9f68780b063ff199e4
   RealmSwift: 0c02b9f2d4be4301c497ed10e53a0580584eb1dd
-  TORoundedTableView: 4155565233135d81d6626a0c4ecfba27991cf2b1
+  TORoundedTableView: 31217495487ec13b9a2750b36e3e49223b0f23cb
 
 PODFILE CHECKSUM: d6949514bcc7984c8b6076d6b77c27f941233b67
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.1.1
