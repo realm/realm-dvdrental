@@ -91,20 +91,27 @@ Realm Object Server for you.
 You will be prompted to create an admin user for the server with an email and
 password. Remember these credentials for later.
 
-**4. Setup the Postgres adapter** - the `adapter.js` file includes a default
+**4. Setup the Postgres adapter** - the `config.js` file includes a default
 configuration for the demo app:
 ```
-// Replace with the token on your Realm Object Server installation
-var access_token = 'YOUR ADMIN TOKEN HERE';
+// Database name
+database_name: "dvdrental",
 
-var pg_host = 'localhost';
-var pg_port = 5432;
+// Realm Object Server URL
+realm_object_server_url: "realm://127.0.0.1:9080",
 
-// On macOS this is your system's username
-var pg_user = 'YOUR POSTGRES USER HERE';
-var pg_password = 'YOUR POSTGRES PASSWORD HERE';
+// Admin token used to talk to ROS - get from ROS output
+admin_user_token: "YOUR ADMIN TOKEN HERE",
+
+// Posgres config used for all connections - replace with your data
+postgres_config: {
+    host:     '127.0.0.1',
+    port:     5432,
+    user:     'YOUR POSTGRES USER HERE',
+    password: 'YOUR_POSTGRES_PASSWORD'
+},
 ```
-You will need to update the `access_token` variable with the admin token created
+You will need to update the `admin_user_token` variable with the admin token created
 via your installation of Realm Object Server:
 
 The admin token is stored in a text file on the server. Under Linux, view the
