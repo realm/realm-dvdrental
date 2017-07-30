@@ -272,3 +272,4 @@ from Postgres, in addition, to Realm files created by the adapter:
 node reset.js
 ```
 Finally, delete the demo app from your device.
+![analytics](https://ga-beacon.appspot.com/UA-50247013-2/realm-dvdrental/README?pixel)
