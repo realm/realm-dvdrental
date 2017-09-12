@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "dependencies": {
     "libpq": "^1.8.5",
-    "realm": "file:realm-professional.tgz",
-    "realm-data-adapters": "0.0.1-alpha.9",
+    "realm": "^1.8.3",
+    "realm-data-adapters": "^0.0.1-alpha.10",
     "sqlstring": "^2.2.0"
   }
 }
