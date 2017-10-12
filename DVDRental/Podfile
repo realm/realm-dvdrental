@@ -1,8 +1,10 @@
+platform :ios, '9.0'
+
 target 'DVDRental' do
   use_frameworks!
 
-  pod 'RealmSwift', '~> 2.4.4'
-  pod 'RealmLoginKit', '~> 0.0.11'
+  pod 'RealmSwift', '3.0.0-rc.1'
+  pod 'RealmLoginKit'
   pod 'Eureka', '~> 2.0.1'
   pod 'BRYXBanner', '~> 0.7.2'
 end

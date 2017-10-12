@@ -29,7 +29,7 @@ class DVDTableViewController: UITableViewController {
         // Here's the important bit about how easy it is to deal with remote data in Realm:
         // Realm supports notifications that fire whenever data changes in a Realm you are watching;
         // In this case we're watching for changes our Films, we can implement it like this:
-        filmNotificationToken = films.addNotificationBlock { [weak self] (changes: RealmCollectionChange) in
+        filmNotificationToken = films.observe { [weak self] (changes: RealmCollectionChange) in
             guard let tableView = self?.tableView else { return }
             switch changes {
             case .initial:
@@ -58,7 +58,7 @@ class DVDTableViewController: UITableViewController {
         // We must listen for changes on inventory objects, since updates don't 
         // propagate up across inverse relationships
         let stock = realm.objects(Inventory.self)
-        inventoryNotificationToken = stock.addNotificationBlock({ [weak self] (changes: RealmCollectionChange) in
+        inventoryNotificationToken = stock.observe({ [weak self] (changes: RealmCollectionChange) in
             guard let `self` = self else { return }
             guard let tableView = self.tableView else { return }
             switch changes {
@@ -81,8 +81,8 @@ class DVDTableViewController: UITableViewController {
     }
     
     deinit {
-        filmNotificationToken?.stop()
-        inventoryNotificationToken?.stop()
+        filmNotificationToken?.invalidate()
+        inventoryNotificationToken?.invalidate()
     }
 
     // MARK: - Table view data source

@@ -180,7 +180,7 @@ class DVDViewController: FormViewController {
         
         self.form = form
         
-        token = realm.objects(Inventory.self)._addNotificationBlock({ [weak self] (changes) in
+        token = realm.objects(Inventory.self).observe({ [weak self] (changes) in
             guard let `self` = self else { return }
             switch changes {
             case .initial:
