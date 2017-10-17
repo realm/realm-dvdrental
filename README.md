@@ -74,7 +74,7 @@ createdb `whoami`
 ```
 This command will create an initial database matching your macOS username.
 
-**3. Run Realm Object Server** - the demo is setup by default to assume the server
+**4. Run Realm Object Server** - the demo is setup by default to assume the server
 is running locally. You can install the macOS version of Realm Object Server by
 downloading the [zip package](https://realm.io/docs/realm-object-server/) or
 follow the directions to install on Linux.
@@ -91,7 +91,7 @@ Realm Object Server for you.
 You will be prompted to create an admin user for the server with an email and
 password. Remember these credentials for later.
 
-**4. Configure the Postgres adapter** - the `config.js` file includes a default
+**5. Configure the Postgres adapter** - the `config.js` file includes a default
 configuration for the demo app:
 ```
 // Database name
@@ -131,7 +131,7 @@ Postgres locally leave the host/port as is.
 If you installed Postgres via Homebrew, then the username is your system's
 username. By default you can leave the password as-is.
 
-**5. Start the Postgres adapter** - first you must retrieve the dependencies via NPM:
+**6. Start the Postgres adapter** - first you must retrieve the dependencies via NPM:
 ```
 npm install
 ```
@@ -146,7 +146,7 @@ The script will add a new database: `dvdrental` to it and load the sample data f
 ```
 node setup.js
 ```
-Finally, start the adapter:
+`Open adapter.js and replace the placeholder text with your professional or enterprise access token. Finally, start the adapter:
 ```
 node adapter.js
 ```
@@ -155,7 +155,7 @@ a synchronized Realm.
 
 The script will then continue listening for changes between Postgres and Realm.
 
-**6. Run `DVDRental` demo app** - finally with everything setup you can run the
+**7. Run `DVDRental` demo app** - finally with everything setup you can run the
 included iOS demo app. Move into the app directory:
 ```
 cd DVDRental
@@ -166,7 +166,7 @@ pod install
 ```
 Finally, open `DVDRental.xcworkspace` and run the application!
 
-**7. Using `DVDRental` demo app** - once you have finally run the demo app, it will
+**8. Using `DVDRental` demo app** - once you have finally run the demo app, it will
 first require you to login. Use the same login credentials you created when
 starting the Realm Object Server in step 3.
 
