@@ -5,6 +5,7 @@
     "libpq": "^1.8.5",
     "realm": "^1.8.3",
     "realm-data-adapters": "^0.0.1-alpha.10",
-    "sqlstring": "^2.2.0"
+    "sqlstring": "^2.2.0",
+    "source-map-support": "^0.5.0"
   }
 }
