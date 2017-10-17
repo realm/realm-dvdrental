@@ -4,8 +4,10 @@ const path = require('path');
 const PostgresAdapter = require('realm-data-adapters').PostgresAdapter;
 const Config = require('./config');
 
+var token = "INSERT_YOUR_REALM_ACCESS_TOKEN";
+
 // Unlock Professional Edition APIs
-Realm.Sync.setAccessToken(fs.readFileSync(path.join(__dirname, './access-token.enterprise'), 'utf-8'));
+Realm.Sync.setAccessToken(token);
 
 const admin_user = Realm.Sync.User.adminUser(Config.admin_user_token);
 
