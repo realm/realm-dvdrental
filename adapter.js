@@ -7,7 +7,7 @@ const Config = require('./config');
 var token = "INSERT_YOUR_REALM_ACCESS_TOKEN";
 
 // Unlock Professional Edition APIs
-Realm.Sync.setAccessToken(token);
+Realm.Sync.setFeatureToken(token);
 
 const admin_user = Realm.Sync.User.adminUser(Config.admin_user_token);
 
