@@ -1,3 +1,7 @@
+<aside class="warning">
+This example is currently out of date.  We are in the process of updating it.  In the meantime, please see the [most recent documentation for working with the Postgres adapter](https://docs.realm.io/platform/using-synced-realms/server-side-usage/data-integration/postgres-connector)
+</aside>
+
 # Overview
 DVDRental is a sample inventory application which demonstrates Realm Mobile
 Platform's enterprise data connector API. The underlying data is a Postgres
